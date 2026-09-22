@@ -1,0 +1,11 @@
+[package]
+name        = "km-ps2-abi"
+version     = "0.1.0"
+edition      = "2024"
+rust-version = "1.92"
+license     = "Apache-2.0"
+description = "Userspace ABI constants for km-ps2 (PS/2 controller)"
+
+[lib]
+name = "km_ps2_abi"
+path = "lib.rs"
