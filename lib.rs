@@ -15,5 +15,6 @@ pub const OP_READ: u32 = 0;
 pub const DEVICE_KEYBOARD: u8 = 0;
 pub const DEVICE_MOUSE:    u8 = 1;
 
-pub const E_INVAL: i64 = -22;
-pub const E_NOSYS: i64 = -38;
+/// Driver return values are system statuses from the error registry
+/// (zigbone_abi::errors); this driver only returns generic errors.
+pub use zigbone_abi::errors::{Error, Status};

@@ -9,3 +9,6 @@ description = "Userspace ABI constants for km-ps2 (PS/2 controller)"
 [lib]
 name = "km_ps2_abi"
 path = "lib.rs"
+
+[dependencies]
+zigbone-abi = { git = "https://github.com/crux-os/zigbone-abi.git" }
