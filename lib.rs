@@ -10,7 +10,14 @@
 
 pub const SLOT_ID: u64 = 0x2020_5350_324F_5053;     // 'PS2OPS  '
 
+/// `OP_READ(device)` -> the next byte it sent (waits for one).
 pub const OP_READ: u32 = 0;
+/// `OP_SEND(device, byte)`: a command or data byte to the device (the
+/// keyboard's 0xED + LED mask ...); its replies come through `OP_READ`.
+/// Needs DEVICE_WRITE.
+pub const OP_SEND: u32 = 1;
+/// Operations a read-only handle may call.
+pub const READ_OPS: u64 = 1 << OP_READ;
 
 pub const DEVICE_KEYBOARD: u8 = 0;
 pub const DEVICE_MOUSE:    u8 = 1;
