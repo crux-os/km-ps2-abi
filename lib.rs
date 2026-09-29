@@ -8,7 +8,7 @@
 #![allow(missing_docs)]
 #![cfg_attr(not(test), no_std)]
 
-pub const SLOT_ID: u64 = 0x2020_5350_324F_5053;     // 'PS2OPS  '
+pub const SLOT_ID: u64 = 0x2020_5350_324F_5053; // 'PS2OPS  '
 
 /// `OP_READ(device)` -> the next byte it sent (waits for one).
 pub const OP_READ: u32 = 0;
@@ -20,7 +20,7 @@ pub const OP_SEND: u32 = 1;
 pub const READ_OPS: u64 = 1 << OP_READ;
 
 pub const DEVICE_KEYBOARD: u8 = 0;
-pub const DEVICE_MOUSE:    u8 = 1;
+pub const DEVICE_MOUSE: u8 = 1;
 
 /// Driver return values are system statuses from the error registry
 /// (zigbone_abi::errors); this driver only returns generic errors.
